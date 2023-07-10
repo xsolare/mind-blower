@@ -1,12 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "ggd",
+  "name": "mind-blower",
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": ">=18.x",
-    "npm": "npm install -g pnpm",
-    "pnpm": ">=8.x"
+    "node": ">=18.x"
   },
   "scripts": {
     "build": "nuxt build",
