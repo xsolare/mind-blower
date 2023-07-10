@@ -1,4 +1,0 @@
-include:
-  - project: "tools/ci-fe"
-    ref: "master"
-    file: "/.develop.v2.gitlab-ci.yml"

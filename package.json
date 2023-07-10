@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "engines": {
     "node": ">=18.x",
-    "npm": "npm install -g pnpm or sh ../scripts/pnpm.sh",
+    "npm": "npm install -g pnpm",
     "pnpm": ">=8.x"
   },
   "scripts": {
@@ -18,8 +18,7 @@
     "lint:ts": "eslint \"./**/*.{ts,tsx,vue}\" --fix",
     "lint:style": "stylelint \"./**/*.{css,sass,scss,vue}\" --fix --allow-empty-input --customSyntax postcss-scss",
     "format": "prettier -w \"./**/*.{ts,tsx,json,scss,md,vue}\"",
-    "postinstall": "cd .. && husky install .husky",
-    "preinstall": "../scripts/nvm.sh && ../scripts/pnpm.sh"
+    "postinstall": "husky install .husky"
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
