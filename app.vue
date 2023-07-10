@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import type { AppConfigInput } from 'nuxt/schema';
 
-import UiModal from '#/components/common/modal/ui-modal.vue';
-import UiSnackbar from '#/components/common/snackbar/ui-snackbar.vue';
+// import UiModal from '#/components/common/modal/ui-modal.vue';
+// import UiSnackbar from '#/components/common/snackbar/ui-snackbar.vue';
 
 const colorMode = useColorMode();
 const app = useAppConfig() as AppConfigInput;
@@ -32,10 +32,10 @@ useHead({
             <NuxtPage />
           </NuxtLayout>
 
-          <v-no-ssr>
-            <ui-snackbar />
-            <ui-modal />
-          </v-no-ssr>
+          <!-- <v-no-ssr> -->
+          <!-- <ui-snackbar /> -->
+          <!-- <ui-modal /> -->
+          <!-- </v-no-ssr> -->
         </v-main>
       </v-app>
     </v-theme-provider>
