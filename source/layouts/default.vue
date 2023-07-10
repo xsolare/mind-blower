@@ -11,59 +11,59 @@ const ulgtu = ref([
     value: [
       {
         title: '1',
-        value: 'ivt-1'
+        value: '/ivt/1'
       },
       {
         title: '2',
-        value: 'ivt-2'
+        value: '/ivt/2'
       },
       {
         title: '3',
-        value: 'ivt-3'
+        value: '/ivt/3'
       },
       {
         title: '4',
-        value: 'ivt-4'
+        value: '/ivt/4'
       },
       {
         title: '5',
-        value: 'ivt-5'
+        value: '/ivt/5'
       },
       {
         title: '6',
-        value: 'ivt-6'
+        value: '/ivt/6'
       },
       {
         title: '7',
-        value: 'ivt-7'
+        value: '/ivt/7'
       },
       {
         title: '8',
-        value: 'ivt-8'
+        value: '/ivt/8'
       },
       {
         title: '9',
-        value: 'ivt-9'
+        value: '/ivt/9'
       },
       {
         title: '10',
-        value: 'ivt-10'
+        value: '/ivt/10'
       },
       {
         title: '11',
-        value: 'ivt-11'
+        value: '/ivt/11'
       },
       {
         title: '12',
-        value: 'ivt-12'
+        value: '/ivt/12'
       },
       {
         title: '13',
-        value: 'ivt-13'
+        value: '/ivt/13'
       },
       {
         title: '14',
-        value: 'ivt-14'
+        value: '/ivt/14'
       }
     ]
   }
@@ -75,7 +75,7 @@ const iatu = ref([
     value: [
       {
         title: 'prolog',
-        value: 'prolog'
+        value: '/prolog/1'
       }
     ]
   },
@@ -84,7 +84,7 @@ const iatu = ref([
     value: [
       {
         title: 'neyronki',
-        value: 'neyronki'
+        value: '/neyronki/1'
       }
     ]
   }
