@@ -1,21 +1,19 @@
 <script lang="ts" setup>
 const { path } = useRoute();
 
-console.log('?', path);
-
 const { data } = await useAsyncData('content-neyronki', () => {
   return queryContent().where({ _path: path }).findOne();
 });
 </script>
 
 <template>
-  <main>
+  <div class="wrapper">
     <ContentRenderer v-if="data" :value="data" />
-  </main>
+  </div>
 </template>
 
 <style lang="scss">
-main {
+.wrapper {
   padding: 10px;
   max-width: 920px;
   margin: 0 auto;

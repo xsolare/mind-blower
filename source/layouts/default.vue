@@ -10,60 +10,69 @@ const ulgtu = ref([
     title: '09.04.01_IVT',
     value: [
       {
-        title: '1',
+        title: '1. Дискретная математика, математическая логика и теория алгоритмов',
         value: '/ivt/1'
       },
       {
-        title: '2',
+        title: '2. Методы оптимизации',
         value: '/ivt/2'
       },
       {
-        title: '3',
+        title: '3. Теория принятия решений',
         value: '/ivt/3'
       },
       {
-        title: '4',
+        title: '4. Теоритические основы информационных технологий',
         value: '/ivt/4'
       },
       {
-        title: '5',
+        title: '5. Интерактивная компьютерная графика',
         value: '/ivt/5'
       },
       {
-        title: '6',
+        title: '6. Программирование',
         value: '/ivt/6'
       },
       {
-        title: '7',
+        title: '7. Технология разработки программного обеспечения',
         value: '/ivt/7'
       },
       {
-        title: '8',
+        title: '8. Организация и архитектура ЭВМ и вычислительных систем',
         value: '/ivt/8'
       },
       {
-        title: '9',
+        title: '9. Операционные системы, оболочки и среды',
         value: '/ivt/9'
       },
       {
-        title: '10',
+        title: '10. Системы управления базами данных',
         value: '/ivt/10'
       },
       {
-        title: '11',
+        title: '11. Сети ЭВМ и телекоммуникации',
         value: '/ivt/11'
       },
       {
-        title: '12',
+        title: '12. Информационная безопасность',
         value: '/ivt/12'
       },
       {
-        title: '13',
+        title: '13. Теория вычислительных процессов, языков программирования и методы трансляции',
         value: '/ivt/13'
       },
       {
-        title: '14',
+        title: '14. Системы искусственного интеллекта',
         value: '/ivt/14'
+      }
+    ]
+  },
+  {
+    title: '09.04.03_PI',
+    value: [
+      {
+        title: '1. Математическая логика и теория алгоритмов',
+        value: '/pi/1'
       }
     ]
   }
@@ -113,7 +122,7 @@ nuxtApp.hook('page:finish', () => {
     <!-- <v-btn variant="text" icon="mdi-dots-vertical" /> -->
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" location="left">
+  <v-navigation-drawer v-model="drawer" rail rail-width="450" location="left">
     <v-list>
       <v-list-group v-for="item in items" :key="item.value" :value="item.title">
         <template #activator="{ props }">
