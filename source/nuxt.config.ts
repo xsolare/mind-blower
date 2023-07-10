@@ -61,6 +61,18 @@ export default defineNuxtConfig({
     '~': resolve(__dirname, './node_modules')
   },
 
+  plugins: [{ src: './plugins/lazy-load.ts' }],
+  vue: {
+    compilerOptions: {
+      directiveTransforms: {
+        'lazy-load': () => ({
+          props: [],
+          needRuntime: true
+        })
+      }
+    }
+  },
+
   colorMode: {
     preference: 'light', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found

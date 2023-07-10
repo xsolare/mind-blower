@@ -1,0 +1,4 @@
+./.husky
+./.vscode
+./.scripts
+./source/.env
