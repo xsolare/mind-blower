@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "ggd",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.x",
+    "npm": "npm install -g pnpm or sh ../scripts/pnpm.sh",
+    "pnpm": ">=8.x"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "npm run lint:ts && npm run lint:style",
+    "lint:ts": "eslint \"./**/*.{ts,tsx,vue}\" --fix",
+    "lint:style": "stylelint \"./**/*.{css,sass,scss,vue}\" --fix --allow-empty-input --customSyntax postcss-scss",
+    "format": "prettier -w \"./**/*.{ts,tsx,json,scss,md,vue}\"",
+    "postinstall": "cd .. && husky install .husky",
+    "preinstall": "../scripts/nvm.sh && ../scripts/pnpm.sh"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@nuxt/content": "^2.7.0",
+    "@pinia/nuxt": "0.4.9",
+    "h3": "1.6.4",
+    "pinia": "2.0.35",
+    "vuetify": "3.2.2"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "0.5.5",
+    "@nuxt/kit": "3.4.3",
+    "@nuxt/types": "2.16.3",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@unhead/vue": "^1.1.27",
+    "eslint": "^8.44.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-vue": "^9.15.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "nuxt": "3.4.3",
+    "prettier": "^3.0.0",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "stylelint": "^15.10.1",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "typescript": "^5.1.6",
+    "vue": "3.2.47",
+    "vue-router": "4.1.6"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix",
+    "*.{css,sass,scss,vue,htm,html}": "stylelint --fix",
+    "*": "prettier -w -u"
+  },
+  "packageManager": "pnpm@8.2.0"
+}

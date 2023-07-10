@@ -1,0 +1,72 @@
+ul {
+  padding-left: $padding-base;
+  list-style-type: disc;
+
+  ::marker {
+    color: $color-primary;
+  }
+
+  > li {
+    margin-bottom: 12px;
+    padding-left: 0;
+    color: $text-secondary;
+  }
+}
+
+ol {
+  --size: 20px;
+  --padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+  counter-reset: item;
+
+  list-style: none;
+  padding-left: calc(var(--size) + var(--padding));
+
+  > li {
+    color: $text-secondary;
+    position: relative;
+    counter-increment: item;
+    padding: $padding-base 0;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  > li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(-1 * var(--size) - var(--padding));
+    width: calc(100% + var(--size) + var(--padding));
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e5e5eb;
+  }
+
+  > li:before {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+}
+
+a:not([href]) {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 16px 0;
+}
