@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     dirs: ['store', 'store/component', 'store/common', 'utils/helpers', 'utils/api']
   },
 
+  app: {
+    baseURL: '/mind-blower/'
+  },
+
   build: {
     transpile: ['vuetify']
   },
@@ -59,18 +63,6 @@ export default defineNuxtConfig({
   alias: {
     '#': resolve(__dirname, '.'),
     '~': resolve(__dirname, './node_modules')
-  },
-
-  plugins: [{ src: './plugins/lazy-load.ts' }],
-  vue: {
-    compilerOptions: {
-      directiveTransforms: {
-        'lazy-load': () => ({
-          props: [],
-          needRuntime: true
-        })
-      }
-    }
   },
 
   colorMode: {
