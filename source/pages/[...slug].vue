@@ -14,6 +14,7 @@ const { data } = await useAsyncData('content-neyronki', () => {
 
 <style lang="scss">
 .wrapper {
+  height: 100%;
   padding: 10px;
   max-width: 920px;
   margin: 0 auto;

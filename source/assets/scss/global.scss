@@ -1,4 +1,5 @@
 @import './settings.scss';
+@import './media';
 @import './normalize.scss';
 
 //* ---- Light theme ----------------------------------------------------------------------- *//
@@ -14,6 +15,8 @@
 
   --border-primary: #{$border-primary};
   --border-secondary: #{$border-secondary};
+
+  --bg-side-panel: #ececec;
 }
 
 //* ---- Dark theme ------------------------------------------------------------------------ *//
@@ -29,6 +32,8 @@
 
   --border-primary: #{$border-primary-dark};
   --border-secondary: #{$border-secondary-dark};
+
+  --bg-side-panel: #0d1117;
 }
 
 .v-progress-linear__indeterminate {
@@ -39,7 +44,7 @@ html {
   font-size: $font-size-base;
   font-family: $font-family-default;
 
-  @media (max-width: 425px) {
+  @include xs {
     font-size: $font-size-small;
   }
 

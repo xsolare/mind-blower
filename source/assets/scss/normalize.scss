@@ -1,16 +1,26 @@
+@import './media';
+
 ul {
   padding-top: 8px;
   padding-left: $padding-base;
   list-style-type: disc;
 
   ::marker {
-    color: $color-primary;
+    color: var(--text-primary);
   }
 
   > li {
     margin-bottom: 12px;
     padding-left: 0;
-    color: $text-secondary;
+    color: var(--text-secondary);
+  }
+
+  @include xs {
+    padding-top: 4px;
+
+    > li {
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -24,6 +34,11 @@ ol {
   --size: 20px;
   --padding: 10px;
 
+  @include xs {
+    --size: 10px;
+    --padding: 4px;
+  }
+
   display: flex;
   flex-direction: column;
 
@@ -34,14 +49,15 @@ ol {
   padding-left: calc(var(--size) + var(--padding));
 
   > li {
-    color: $text-secondary;
+    color: var(--text-secondary);
     position: relative;
     counter-increment: item;
     padding: $padding-base 0;
 
     font-weight: 400;
-    font-size: 17px;
-    line-height: 22px;
+    @include xs {
+      padding: calc($padding-base / 2) 0;
+    }
   }
 
   > li:not(:last-child):after {
@@ -53,7 +69,7 @@ ol {
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: #e5e5eb;
+    border-bottom-color: var(--border-secondary);
   }
 
   > li:before {
@@ -63,7 +79,7 @@ ol {
 
 a {
   text-decoration: none;
-  color: $text-primary;
+  color: var(--text-secondary);
 }
 
 a:not([href]) {
@@ -75,5 +91,21 @@ a:not([href]) {
 }
 
 hr {
+  background-color: var(--border-secondary) !important;
+  margin: 16px 0;
+
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+
+  @include xs {
+    margin: 8px 0;
+  }
+}
+
+#readme-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 16px 0;
 }
