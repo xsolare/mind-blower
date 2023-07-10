@@ -19,10 +19,6 @@ export default defineNuxtConfig({
     dirs: ['store', 'store/component', 'store/common', 'utils/helpers', 'utils/api']
   },
 
-  app: {
-    baseURL: '/mind-blower/'
-  },
-
   build: {
     transpile: ['vuetify']
   },
