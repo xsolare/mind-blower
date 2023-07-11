@@ -109,3 +109,15 @@ hr {
   justify-content: center;
   margin: 16px 0;
 }
+
+.intro {
+  margin-top: 225px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    max-width: 460px;
+  }
+}
