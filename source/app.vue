@@ -33,8 +33,8 @@ useHead({
           </NuxtLayout>
 
           <!-- <v-no-ssr> -->
-            <!-- <ui-snackbar /> -->
-            <!-- <ui-modal /> -->
+          <!-- <ui-snackbar /> -->
+          <!-- <ui-modal /> -->
           <!-- </v-no-ssr> -->
         </v-main>
       </v-app>
