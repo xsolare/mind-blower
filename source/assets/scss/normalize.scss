@@ -121,3 +121,25 @@ hr {
     max-width: 460px;
   }
 }
+
+h2#_1,
+h2#_2,
+h2#_3,
+h2#_4,
+h2#_5,
+h2#_6,
+h2#_7,
+h2#_8,
+h2#_9,
+h2#_10 {
+  opacity: 0;
+  margin-bottom: 28px;
+}
+
+details {
+  padding: 4px 16px;
+  border-radius: 16px;
+
+  border: 2px solid var(--border-secondary);
+  box-shadow: 0px 0px 4px var(--border-secondary);
+}
