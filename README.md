@@ -46,6 +46,7 @@ pnpm dev
 2. 2
 3. 3
 
+<hr/>
 <details>
 <summary>Примеры:</summary>
 
