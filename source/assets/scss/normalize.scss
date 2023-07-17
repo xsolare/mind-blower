@@ -148,3 +148,11 @@ details {
   border: 2px solid var(--border-secondary);
   box-shadow: 0px 0px 4px var(--border-secondary);
 }
+
+.img {
+  margin: 8px auto;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
