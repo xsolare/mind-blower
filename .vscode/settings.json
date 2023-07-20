@@ -25,7 +25,7 @@
       "backgroundColor": "transparent",
       "bold": false,
       "italic": true
-    },  
+    },
     {
       "tag": "*",
       "color": "#98C379",
@@ -34,7 +34,7 @@
       "backgroundColor": "transparent",
       "bold": false,
       "italic": false
-    },  
+    },
     {
       "tag": "TODO",
       "color": "#ffcd1b",
@@ -47,4 +47,3 @@
   ],
   "nuxt.isNuxtApp": false,
 }
-

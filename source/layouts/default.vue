@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import { useAppStore } from '../store/common/app.store';
 
+interface IValue {
+  title: string;
+  value: string;
+  status?: string;
+}
+
 const nuxtApp = useNuxtApp();
 const { switchTheme } = useAppStore();
 
@@ -16,12 +22,14 @@ const ulgtu = ref([
         value: '/ivt/1'
       },
       {
-        title: '⚠️2. Методы оптимизации',
-        value: '/ivt/2'
+        title: '2. Методы оптимизации',
+        value: '/ivt/2',
+        status: '3'
       },
       {
-        title: '⚠️3. Теория принятия решений',
-        value: '/ivt/3'
+        title: '3. Теория принятия решений',
+        value: '/ivt/3',
+        status: '3'
       },
       {
         title: '4. Теоритические основы информационных технологий',
@@ -32,8 +40,9 @@ const ulgtu = ref([
         value: '/ivt/5'
       },
       {
-        title: '⚠️6. Программирование',
-        value: '/ivt/6'
+        title: '6. Программирование',
+        value: '/ivt/6',
+        status: '3'
       },
       {
         title: '7. Технология разработки программного обеспечения',
@@ -56,25 +65,29 @@ const ulgtu = ref([
         value: '/ivt/11'
       },
       {
-        title: '⚠️12. Информационная безопасность',
-        value: '/ivt/12'
+        title: '12. Информационная безопасность',
+        value: '/ivt/12',
+        status: '3'
       },
       {
-        title: '⚠️13. Теория вычислительных процессов, языков программирования и методы трансляции',
-        value: '/ivt/13'
+        title: '13. Теория вычислительных процессов, языков программирования и методы трансляции',
+        value: '/ivt/13',
+        status: '3'
       },
       {
         title: '14. Системы искусственного интеллекта',
-        value: '/ivt/14'
+        value: '/ivt/14',
+        status: '4'
       }
-    ]
+    ] as IValue[]
   },
   {
     title: '09.04.03_PI',
     value: [
       {
-        title: '⚠️1. Математическая логика и теория алгоритмов',
-        value: '/pi/1'
+        title: '1. Математическая логика и теория алгоритмов',
+        value: '/pi/1',
+        status: '3'
       },
       {
         title: '2. Теория вероятностей и математическая статистика',
@@ -90,31 +103,36 @@ const ulgtu = ref([
       },
       {
         title: '5. Операционные системы и сети',
-        value: '/pi/5'
+        value: '/pi/5',
+        status: '3'
       },
       {
-        title: '⚠️6. Базы данных',
-        value: '/pi/6'
+        title: '6. Базы данных',
+        value: '/pi/6',
+        status: '3'
       },
       {
         title: '7. Конструирование программного обеспечения',
         value: '/pi/7'
       },
       {
-        title: '⚠️8. Проектирование человеко-машинного интерфейса',
-        value: '/pi/8'
+        title: '8. Проектирование человеко-машинного интерфейса',
+        value: '/pi/8',
+        status: '3'
       },
       {
         title: '9. Проектирование и архитектура программных систем',
         value: '/pi/9'
       },
       {
-        title: '⚠️10. Объектно-ориентированное программирование',
-        value: '/pi/10'
+        title: '10. Объектно-ориентированное программирование',
+        value: '/pi/10',
+        status: '3'
       },
       {
-        title: '⚠️11. Распределенные вычисления и приложения',
-        value: '/pi/11'
+        title: '11. Распределенные вычисления и приложения',
+        value: '/pi/11',
+        status: '3'
       },
       {
         title: '12. Архитектура вычислительных систем',
@@ -140,7 +158,7 @@ const ulgtu = ref([
         title: '17. Эконометрика и статистика',
         value: '/pi/17'
       }
-    ]
+    ] as IValue[]
   }
 ]);
 
@@ -150,18 +168,20 @@ const iatu = ref([
     value: [
       {
         title: 'prolog',
-        value: '/prolog/1'
+        value: '/prolog/1',
+        status: '1'
       }
-    ]
+    ] as IValue[]
   },
   {
     title: 'neyronki',
     value: [
       {
         title: 'neyronki',
-        value: '/neyronki/1'
+        value: '/neyronki/1',
+        status: '1'
       }
-    ]
+    ] as IValue[]
   }
 ]);
 
@@ -215,6 +235,7 @@ nuxtApp.hook('page:finish', () => {
           <v-list-item
             v-for="(v, i) in value"
             :key="i"
+            :class="`status-${v?.status ?? 2}`"
             :title="v.title"
             :value="v.value"
             @click="navigateTo(v.value)" />
@@ -236,11 +257,54 @@ nuxtApp.hook('page:finish', () => {
         @click="navigateTo(link, { external: true })" />
     </div>
 
-    <div>{{ new Date().getFullYear() }} — <strong>xSolare</strong></div>
+    <div>{{ new Date().getFullYear() }} — <strong>xSolare</strong> — <italic>v 5</italic></div>
   </v-footer>
 </template>
 
 <style lang="scss">
+.status {
+  &-1 {
+    color: rgb(0, 150, 20);
+  }
+
+  &-2 {
+    color: rgb(44, 0, 11);
+  }
+
+  &-3 {
+    color: rgb(147, 173, 0);
+  }
+
+  &-4 {
+    font-size: 50px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow:
+      1px 1px 0 hsl(20, 100%, 50%),
+      2px 2px 0 hsl(20, 100%, 50%),
+      3px 3px 0 hsl(35, 100%, 50%),
+      4px 4px 0 hsl(35, 100%, 50%),
+      5px 5px 0 hsl(45, 100%, 50%),
+      6px 6px 0 hsl(45, 100%, 55%),
+      7px 7px 0 hsl(55, 100%, 60%),
+      8px 8px 0 hsl(55, 100%, 65%);
+    color: hsl(0, 100%, 40%);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      text-shadow:
+        0 1px 0 hsl(20, 100%, 50%),
+        0 2px 0 hsl(20, 100%, 50%),
+        0 3px 0 hsl(35, 100%, 50%),
+        0 4px 0 hsl(35, 100%, 50%),
+        0 5px 0 hsl(45, 100%, 50%),
+        0 6px 0 hsl(45, 100%, 55%),
+        0 7px 0 hsl(55, 100%, 60%),
+        0 8px 0 hsl(55, 100%, 65%);
+      color: hsl(0, 100%, 40%);
+    }
+  }
+}
+
 nav {
   background-color: var(--bg-side-panel) !important;
 }
