@@ -203,7 +203,7 @@ nuxtApp.hook('page:finish', () => {
 <template>
   <v-app-bar color="primary" prominent>
     <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" />
-    <v-toolbar-title>I really wanna die</v-toolbar-title>
+    <v-toolbar-title> I really wanna die </v-toolbar-title>
     <v-spacer />
 
     <v-tooltip width="350" location="top">
@@ -264,18 +264,54 @@ nuxtApp.hook('page:finish', () => {
 <style lang="scss">
 .status {
   &-1 {
-    color: rgb(0, 150, 20);
+    &:before {
+      content: '•';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 10px;
+      height: 100%;
+      margin-right: 5px;
+      color: rgb(0, 150, 20);
+    }
   }
 
   &-2 {
-    color: rgb(44, 0, 11);
+    &:before {
+      content: ' ';
+      width: 10px;
+      margin-right: 5px;
+    }
   }
 
   &-3 {
-    color: rgb(147, 173, 0);
+    &:before {
+      content: '•';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 10px;
+      height: 100%;
+      margin-right: 5px;
+      color: rgb(209, 196, 19);
+    }
   }
 
   &-4 {
+    &:before {
+      content: '💀';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 10px;
+      font-size: 0.7rem;
+      margin-right: 5px;
+      text-shadow: none;
+    }
+
     font-size: 50px;
     font-weight: normal;
     cursor: pointer;
